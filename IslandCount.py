@@ -11,7 +11,7 @@ def main(input):
         directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]
 
         while queue:
-            x_1, y_1 = queue.pop()
+            x_1, y_1 = queue.popleft()
             for dx, dy in directions:
                 new_x, new_y = x_1 + dx, y_1 + dy
                 if 0 <= new_x < len(input) and 0 <= new_y < len(input[0]) and (new_x, new_y) not in visited and input[new_x][new_y] == 0:
